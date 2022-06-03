@@ -3,12 +3,20 @@ package com.sinngjpeg.simulator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import com.sinngjpeg.simulator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val tvHello = findViewById<TextView>(R.id.tv_hello)
+        binding.tvHello.text = "Eae Android"
+//        val tvHello = findViewById<TextView>(R.id.tv_hello)
+
+
     }
 }
