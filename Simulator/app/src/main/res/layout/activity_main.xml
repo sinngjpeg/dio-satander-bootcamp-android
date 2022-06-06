@@ -18,15 +18,17 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_matches"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            tools:itemCount="3"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/main_item" />
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_simulate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="true"
         android:layout_margin="16dp"
+        android:clickable="true"
         android:contentDescription="@string/botao_de_simula_o"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
