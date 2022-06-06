@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Simulator</string>
     <string name="botao_de_simula_o">Botao de simulação</string>
+    <string name="iv_home_team_description">Image home team</string>
+    <string name="iv_visit_team_description">Image visit team</string>
+    <string name="txt_versus">X</string>
 </resources>
