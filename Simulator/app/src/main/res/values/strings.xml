@@ -4,4 +4,5 @@
     <string name="iv_home_team_description">Image home team</string>
     <string name="iv_visit_team_description">Image visit team</string>
     <string name="txt_versus">X</string>
+    <string name="error_api">Unexpected error</string>
 </resources>

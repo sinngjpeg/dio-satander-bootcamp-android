@@ -4,4 +4,5 @@
     <string name="botao_de_simula_o">Simulation Buton</string>
     <string name="iv_home_team_description">Imagem time da casa</string>
     <string name="iv_visit_team_description">Imagem do time visitante</string>
+    <string name="error_api">Erro inesperado</string>
 </resources>
