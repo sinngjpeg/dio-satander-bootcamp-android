@@ -1,15 +1,18 @@
 package com.sinngjpeg.simulator.ui.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.core.graphics.drawable.IconCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.sinngjpeg.simulator.databinding.MainItemBinding;
 import com.sinngjpeg.simulator.domain.Match;
+import com.sinngjpeg.simulator.ui.DetailActivity;
 
 import java.util.List;
 
@@ -55,6 +58,11 @@ public class MatchesAdapter extends RecyclerView.Adapter<MatchesAdapter.ViewHold
         if (match.getAwayTeam().getScore() != null) {
             holder.binding.tvVisitTeamScore.setText(String.valueOf(match.getAwayTeam().getScore()));
         }
+        holder.itemView.setOnClickListener(view -> {
+            Intent intent = new Intent(context, DetailActivity.class);
+            intent.putExtra(DetailActivity.Extras.MATCH, match);
+            context.startActivity(intent);
+        });
     }
 
     @Override
