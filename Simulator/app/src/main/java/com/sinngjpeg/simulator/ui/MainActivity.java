@@ -4,12 +4,15 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.sinngjpeg.simulator.R;
 import com.sinngjpeg.simulator.data.MatchesAPI;
 import com.sinngjpeg.simulator.databinding.ActivityMainBinding;
 import com.sinngjpeg.simulator.domain.Match;
+import com.sinngjpeg.simulator.ui.adapter.MatchesAdapter;
 
 import java.util.List;
 
@@ -22,6 +25,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     private MatchesAPI matchesAPI;
+    private RecyclerView.Adapter matchesAdapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -52,11 +56,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupMatchesList() {
+        binding.rvMatches.setHasFixedSize(true);
+        binding.rvMatches.setLayoutManager(new LinearLayoutManager(this));
         matchesAPI.getMatches().enqueue(new Callback<List<Match>>() {
             @Override
             public void onResponse(Call<List<Match>> call, Response<List<Match>> response) {
                 if (response.isSuccessful()) {
                     List<Match> matches = response.body();
+                    matchesAdapter = new MatchesAdapter(matches);
+                    binding.rvMatches.setAdapter(matchesAdapter);
                 } else {
                     showErrorMessage();
                 }
