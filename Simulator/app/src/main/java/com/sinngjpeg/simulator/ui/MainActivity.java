@@ -1,5 +1,7 @@
 package com.sinngjpeg.simulator.ui;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -48,7 +50,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setFloatingActionButton() {
-        //TODO CRIAR EVENTO DE CLICK E SIMULAÇÃO DE PARTIDAS.
+        binding.fabSimulate.setOnClickListener(view -> {
+            view.animate().rotationBy(360).setDuration(500).setListener(new AnimatorListenerAdapter() {
+                @Override
+                public void onAnimationEnd(Animator animation) {
+                    //  TODO IMPLEMENTAR O ALGORITMO DE SIMULAÇÃO DE PARTIDA.
+                }
+            });
+        });
     }
 
     private void setMatchesRefresh() {
@@ -56,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupMatchesList() {
+        binding.srlMatches.setRefreshing(true);
         binding.rvMatches.setHasFixedSize(true);
         binding.rvMatches.setLayoutManager(new LinearLayoutManager(this));
         findMatchesFromAPI();
@@ -72,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     showErrorMessage();
                 }
+                binding.srlMatches.setRefreshing(false);
             }
 
             @Override
