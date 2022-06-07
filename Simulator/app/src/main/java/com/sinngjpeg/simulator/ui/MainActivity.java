@@ -1,4 +1,4 @@
-package com.sinngjpeg.simulator;
+package com.sinngjpeg.simulator.ui;
 
 import android.os.Bundle;
 
@@ -15,5 +15,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        setupMatchesList();
+        setMatchesRefresh();
+        setFloatingActionButton();
+    }
+
+    private void setFloatingActionButton() {
+        //TODO CRIAR EVENTO DE CLICK E SIMULAÇÃO DE PARTIDAS.
+    }
+
+    private void setMatchesRefresh() {
+        // TODO ATUALIZAR AS PARTIDAS NA AÇÃO DE SWIPE REFRESH
+    }
+
+    private void setupMatchesList() {
+        // TODO LISTAR AS PARTIDAS, CONSUMINDO NOSSA API.
     }
 }

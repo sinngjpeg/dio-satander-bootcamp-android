@@ -1,4 +1,4 @@
-package com.sinngjpeg.simulator
+package com.sinngjpeg.simulator.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
