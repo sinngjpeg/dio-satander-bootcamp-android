@@ -52,12 +52,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setMatchesRefresh() {
-        // TODO ATUALIZAR AS PARTIDAS NA AÇÃO DE SWIPE REFRESH
+        binding.srlMatches.setOnRefreshListener(this::findMatchesFromAPI);
     }
 
     private void setupMatchesList() {
         binding.rvMatches.setHasFixedSize(true);
         binding.rvMatches.setLayoutManager(new LinearLayoutManager(this));
+        findMatchesFromAPI();
+    }
+
+    private void findMatchesFromAPI() {
         matchesAPI.getMatches().enqueue(new Callback<List<Match>>() {
             @Override
             public void onResponse(Call<List<Match>> call, Response<List<Match>> response) {
