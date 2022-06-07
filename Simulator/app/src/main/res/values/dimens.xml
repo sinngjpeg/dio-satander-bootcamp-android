@@ -2,5 +2,5 @@
 <resources>
     <dimen name="dimen_16dp">16dp</dimen>
     <dimen name="dimen_120dp">120dp</dimen>
-    <dimen name="app_bar_height">152dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
 </resources>
