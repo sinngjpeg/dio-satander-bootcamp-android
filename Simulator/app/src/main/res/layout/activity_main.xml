@@ -27,6 +27,6 @@
         android:clickable="true"
         android:layout_gravity="end|bottom"
         android:contentDescription="@string/botao_de_simula_o"
-        app:srcCompat="@drawable/ic_floating_action_buttom" />
+        app:srcCompat="@drawable/ic_floating_action_button" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

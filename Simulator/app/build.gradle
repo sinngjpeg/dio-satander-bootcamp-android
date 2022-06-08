@@ -6,8 +6,6 @@ plugins {
     id 'com.google.firebase.crashlytics'
 }
 
-
-
 android {
     compileSdk 32
 
