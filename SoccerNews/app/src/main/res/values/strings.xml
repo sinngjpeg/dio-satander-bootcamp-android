@@ -3,4 +3,6 @@
     <string name="title_news">News</string>
     <string name="title_favorites">Favorites</string>
     <string name="txt_open_link">Open Link</string>
+    <string name="txt_icon_share">Icone de compartilhamento</string>
+    <string name="txt_icon_favorite">icone de favorito</string>
 </resources>
