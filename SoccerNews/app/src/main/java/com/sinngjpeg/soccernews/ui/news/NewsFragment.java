@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -18,14 +17,16 @@ public class NewsFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        NewsViewModel homeViewModel =
+        NewsViewModel newsViewModel =
                 new ViewModelProvider(this).get(NewsViewModel.class);
 
         binding = FragmentNewsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-//        final TextView textView = binding.textNews;
-//        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+
+        newsViewModel.getNews().observe(getViewLifecycleOwner(), news -> {
+
+        });
         return root;
     }
 
