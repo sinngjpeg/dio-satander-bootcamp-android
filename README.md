@@ -4,3 +4,4 @@ Repositorio dedicado ao Bootcampo da DIO Santander Android Developer
 
 
     App Simulator - Simula partidas entre times e mostra o detalhe dessas partidas. 
+    App Soccer News - Informa as ultimas noticias do futebol feminino.
