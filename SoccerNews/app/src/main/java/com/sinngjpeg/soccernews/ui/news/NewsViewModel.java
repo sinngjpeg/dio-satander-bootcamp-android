@@ -20,7 +20,7 @@ public class NewsViewModel extends ViewModel {
         List<News> news = new ArrayList<>();
         news.add(new News("Ferroviaria Tem Desfalque Importante", "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."));
         news.add(new News("Ferrinha Joga No Sabado", "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."));
-        news.add(new News("Copo do Mundo Feminina Está Terminando", "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."));
+        news.add(new News("Copa do Mundo Feminina Está Terminando", "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."));
 
 
         this.news.setValue(news);
